@@ -1,0 +1,14 @@
+<div>
+    <h1>Census Records</h1>
+    <button (click)="addCensusRecord()">Add Census Record</button>
+    <ul>
+      <li *ngFor="let census of censusList">
+        <p>{{ census.year }} - {{ census.censusTaker }}</p>
+        <p>{{ census.peopleInHousehold }} people</p>
+        <p>{{ census.address.street }}, {{ census.address.city }}, {{ census.address.state }} {{ census.address.zipCode }}</p>
+        <button (click)="updateCensusRecord(census._id)">Update</button>
+        <button (click)="deleteCensusRecord(census._id)">Delete</button>
+      </li>
+    </ul>
+  </div>
+  
